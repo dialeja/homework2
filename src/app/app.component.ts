@@ -1,4 +1,6 @@
+import { Post } from './post.interface';
 import { Component } from '@angular/core';
+import { postList } from './../assets/items';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  data: Post[] = [];
+
+  constructor() {
+
+    console.log(postList);
+    this.data = postList;
+
+    }
 }
